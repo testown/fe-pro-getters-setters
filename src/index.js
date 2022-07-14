@@ -21,51 +21,27 @@ export const school = {
     7: new Student('Ivan', [76, 89, 78, 98, 98, 99, 89, 96]),
   },
   get aGradeStudents() {
-    const valuesSchool = Object.values(this.students);
-    const resulStudents = Object.keys(valuesSchool)
-      .filter(
-        (elem) =>
-          this.students[elem].averageGrade >= 90 &&
-          this.students[elem].averageGrade <= 100
-      )
-      .map((elem) => this.students[elem].name)
+    return Object.values(this.students)
+      .filter((item) => item.averageGrade >= 90 && item.averageGrade <= 100)
+      .map((item) => item.name)
       .join(', ');
-    return resulStudents;
   },
   get bGradeStudents() {
-    const valuesSchool = Object.values(this.students);
-    const resulStudents = Object.keys(valuesSchool)
-      .filter(
-        (elem) =>
-          this.students[elem].averageGrade >= 75 &&
-          this.students[elem].averageGrade <= 89
-      )
-      .map((elem) => this.students[elem].name)
+    return Object.values(this.students)
+      .filter((item) => item.averageGrade >= 75 && item.averageGrade <= 89)
+      .map((item) => item.name)
       .join(', ');
-    return resulStudents;
   },
   get cGradeStudents() {
-    const valuesSchool = Object.values(this.students);
-    const resulStudents = Object.keys(valuesSchool)
-      .filter(
-        (elem) =>
-          this.students[elem].averageGrade >= 60 &&
-          this.students[elem].averageGrade <= 74
-      )
-      .map((elem) => this.students[elem].name)
+    return Object.values(this.students)
+      .filter((item) => item.averageGrade >= 60 && item.averageGrade <= 74)
+      .map((item) => item.name)
       .join(', ');
-    return resulStudents;
   },
   get dGradeStudents() {
-    const valuesSchool = Object.values(this.students);
-    const resulStudents = Object.keys(valuesSchool)
-      .filter(
-        (elem) =>
-          this.students[elem].averageGrade >= 0 &&
-          this.students[elem].averageGrade <= 59
-      )
-      .map((elem) => this.students[elem].name)
+    return Object.values(this.students)
+      .filter((item) => item.averageGrade >= 0 && item.averageGrade <= 59)
+      .map((item) => item.name)
       .join(', ');
-    return resulStudents;
   },
 };
